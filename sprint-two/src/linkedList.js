@@ -2,7 +2,7 @@ var LinkedList = function(){
   var list = {};
   list.head = null;
   list.tail = null;
-
+  //O(1)
   list.addToTail = function(value){
     if(!list.head){
       list.head = Node(value);
@@ -22,7 +22,7 @@ var LinkedList = function(){
     //tail will = lastBuiltNode.value
     //head will be same
   };
-
+  //O(1)
   list.removeHead = function(){
     //store the list.head.value
     //list.head.value = list.head.next
@@ -32,7 +32,7 @@ var LinkedList = function(){
 
     return headNode.value;
   };
-
+  //O(n)
   list.contains = function(target){
     //received the currentNode
 

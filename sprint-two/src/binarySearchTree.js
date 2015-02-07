@@ -5,7 +5,7 @@ var BinarySearchTree = function(value){
 
 
 };
-
+//O(log n)
 BinarySearchTree.prototype.insert = function(value){
   var parent;
   if (!arguments[1]) {
@@ -26,6 +26,7 @@ BinarySearchTree.prototype.insert = function(value){
     parent.insert(value, parent.right);
   }
 };
+//O(log n)
 BinarySearchTree.prototype.contains = function(target){
   var parent;
   var bool = false;
@@ -45,6 +46,7 @@ BinarySearchTree.prototype.contains = function(target){
   }
   return bool;
 };
+//O(log n)
 BinarySearchTree.prototype.depthFirstLog = function(cb){
   var parent;
   if (!arguments[1]) {

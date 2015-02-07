@@ -6,6 +6,7 @@ var Set = function(){
 
 var setPrototype = {};
 
+//O(n)
 setPrototype.add = function(item){
   // push item into storage
   // check the storage if the item already exist
@@ -13,7 +14,7 @@ setPrototype.add = function(item){
     this._storage.push(item);
   }
 };
-
+//O(n)
 setPrototype.contains = function(item){
   //search storage to see if items is in our storage
   // var bool = false;
@@ -32,7 +33,7 @@ setPrototype.contains = function(item){
 
 
 };
-
+//O(n)
 setPrototype.remove = function(item){
   if(this._storage.indexOf(item)> -1){
     delete this._storage[this._storage.indexOf(item)];

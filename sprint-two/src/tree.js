@@ -10,7 +10,7 @@ var Tree = function(value){
 
 
 var treeMethods = {};
-
+//O(1)
 treeMethods.addChild = function(value){
   //child = Tree(value)
   var child = Tree(value);
@@ -21,7 +21,7 @@ treeMethods.addChild = function(value){
   //push the child in to newTree.children
 
 };
-
+//O(n)
 treeMethods.contains = function(target){
   //base perfect case: FOUND (target === value) return true;
   var bool = false;
