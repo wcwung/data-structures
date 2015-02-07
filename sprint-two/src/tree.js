@@ -24,12 +24,27 @@ treeMethods.addChild = function(value){
 
 treeMethods.contains = function(target){
   //base perfect case: FOUND (target === value) return true;
-  if (target === this.value) {
+  var bool = false;
+  var parent;
+  if (!arguments[1]) {
+    parent = this;
+  } else {
+    parent = arguments[1];
+  }
+  if (target === parent.value) {
     return true;
   }
-  for (var i = 0; i < this.children.length; i++) {
-    this.contains(target, this.children[i]);
+
+  for (var i = 0; i < parent.children.length; i++) {
+    //bool = recursive function(target, parent.children[i]);
+    bool = parent.contains(target, parent.children[i]);
+    if (bool) {
+      break;
+    }
   }
+
+  return bool;
+
   //forloop to iterate through the children.
   //recursivly go through each children.
   //
