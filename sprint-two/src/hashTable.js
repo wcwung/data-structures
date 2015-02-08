@@ -14,9 +14,13 @@ HashTable.prototype.insert = function(k, v){
     this._storage.set(i, [[k,v]]);
   } else {
     _.each(this._storage.get(i), function(value, index, storage){
-      storage.push([k,v]);
-      console.log(storage);
+      if(value[0] === k){
+        value[1] = v;
+      }else{
+        storage.push([k,v]);
+      }
     });
+
   }
 };
 //O(n)
